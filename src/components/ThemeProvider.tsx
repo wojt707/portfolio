@@ -32,7 +32,7 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({
 
   useEffect(() => {
     const root = window.document.documentElement
-    console.log(theme)
+
     root.classList.remove('light', 'dark')
 
     if (theme === 'system') {

@@ -1,5 +1,20 @@
-import { About } from './About'
+import { Education } from './Education'
+import { Header } from './Header'
 import { ModeToggle } from './ModeToggle'
+import { Projects } from './Projects'
+import { Skills } from './Skills'
+import { Summary } from './Summary'
 import { ThemeProvider, useTheme } from './ThemeProvider'
+import { WorkExperience } from './WorkExperience'
 
-export { About, ModeToggle, ThemeProvider, useTheme }
+export {
+  Education,
+  Header,
+  ModeToggle,
+  Projects,
+  Skills,
+  Summary,
+  ThemeProvider,
+  useTheme,
+  WorkExperience,
+}

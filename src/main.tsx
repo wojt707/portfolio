@@ -1,12 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import { About, ThemeProvider } from './components'
+import { ThemeProvider } from '@/components'
+import { ResumePage } from '@/pages'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider defaultTheme="dark">
-      <About />
+      <ResumePage />
     </ThemeProvider>
   </StrictMode>
 )

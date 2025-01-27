@@ -12,21 +12,18 @@ const ModeToggle = () => {
         variant="outline"
         size="icon"
         onClick={() => setTheme('dark')}
-        className="absolute rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
+        className="size-8 cursor-pointer absolute rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
       >
-        <Moon className="h-[1.2rem] w-[1.2rem]" />
+        <Moon className="size-4" />
       </Button>
       <Button
         variant="outline"
         size="icon"
         onClick={() => setTheme('light')}
-        className="rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
+        className="size-8 cursor-pointer rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
       >
-        <Sun className="h-[1.2rem] w-[1.2rem]" />
+        <Sun className="size-4" />
       </Button>
-      <Button onClick={() => setTheme('light')}>Light</Button>
-      <Button onClick={() => setTheme('dark')}>Dark</Button>
-      <Button onClick={() => setTheme('system')}>System</Button>
     </>
   )
 }
