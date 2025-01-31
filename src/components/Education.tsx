@@ -18,7 +18,7 @@ const EducationPeriod: React.FC<EducationPeriodProps> = ({
   monthEnd,
 }) => {
   return (
-    <div className="text-sm tabular-nums text-gray-500">
+    <div className="text-nowrap text-sm tabular-nums text-gray-500">
       {monthStart} {start} -{' '}
       {monthEnd && end ? `${monthEnd} ${end}` : 'Present'}
     </div>
@@ -48,7 +48,7 @@ const EducationItem: React.FC<EducationItemProps> = ({ education }) => {
         <div className="flex items-center gap-x-4">
           <h3 className="font-semibold leading-none">
             <a
-              className="text-nowrap hover:underline"
+              className=" hover:underline"
               href={link}
               target="_blank"
               rel="noopener noreferrer"
@@ -56,7 +56,7 @@ const EducationItem: React.FC<EducationItemProps> = ({ education }) => {
               {school}
             </a>
           </h3>
-          <div className="flex gap-x-4 items-center text-pretty font-mono text-xs text-gray-500">
+          <div className="max-sm:hidden flex gap-x-4 items-center text-pretty font-mono text-xs text-gray-500">
             <a
               className="flex gap-x-1.5 leading-none hover:underline"
               href={locationLink}
@@ -77,6 +77,17 @@ const EducationItem: React.FC<EducationItemProps> = ({ education }) => {
           end={end}
           monthEnd={monthEnd}
         />
+      </div>
+      <div className="sm:hidden mt-1 flex gap-x-4 items-center text-pretty font-mono text-xs text-gray-500">
+        <a
+          className="flex gap-x-1.5 leading-none hover:underline"
+          href={locationLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <GlobeIcon className="min-w-3 min-h-3 size-3" aria-hidden="true" />
+          {location}
+        </a>
       </div>
       <div className="mt-2 text-pretty font-mono text-sm text-foreground/80">
         {degree}

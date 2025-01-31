@@ -50,8 +50,9 @@ export const RESUME_DATA = {
   work: [
     {
       company: 'Fagor Arrasate',
-      location: 'Ethridge, TN, United States, CST',
-      locationLink: 'https://www.google.com/maps/place/Ethridge,+TN+38456,+USA',
+      location: 'Lawrenceburg, TN, United States, CST',
+      locationLink:
+        'https://www.google.pl/maps/place/Lawrenceburg,+Tennessee,+Stany+Zjednoczone',
       link: 'https://fagorarrasate.com',
       type: 'On-site',
       badges: ['SCADA', 'Siemens TIA Portal', 'Beckhoff TwinCAT'],
@@ -175,6 +176,50 @@ export const RESUME_DATA = {
         'AI-powered piano music generation tool. It utilizes a custom-trained LSTM model to generate MIDI compositions based on user-specified parameters such as genre, tempo, length and randomness.',
       link: {
         href: 'https://midiforge.onrender.com',
+      },
+    },
+    {
+      title: 'Clinic Management',
+      techStack: [
+        'React',
+        'Typescript',
+        'TailwindCSS',
+        'Shadcn-ui',
+        'Java',
+        'JWT',
+      ],
+      description:
+        'A role-based clinic management web app with authentication and dynamic UI based on user roles (receptionist, doctor, lab assistant, lab supervisor, admin). Features include among others patient registration, visit scheduling, physical examinations, lab test processing, and result validation.',
+
+      link: {
+        href: 'https://github.com/allmindproject',
+      },
+    },
+    {
+      title: 'Driver in the Loop',
+      techStack: ['Python', 'ROS', 'Raspberry Pi', 'Carla Simulator', 'Ubuntu'],
+      description:
+        'A vehicle motion simulation system linking a physical test stand with a virtual environment. Uses Carla Simulator to capture vehicle dynamics and control a scaled model via servos and a DC motors, enabling real-time driver interaction.',
+      link: {
+        href: 'https://github.com/Kakub02/PBL_DriverInTheLoop',
+      },
+    },
+    {
+      title: 'Bipedal Walker TD3',
+      techStack: ['Python', 'Pythorch', 'Gymnasium', 'TD3 (Twin Delayed DDPG)'],
+      description:
+        'Reinforcement learning project training a Bipedal Walker agent using the TD3 algorithm in the Gymnasium environment aimed at improving stability and motion of the agent.',
+      link: {
+        href: 'https://github.com/wojt707/bipedal-walker-td3',
+      },
+    },
+    {
+      title: 'Escape the Maze',
+      techStack: ['C++', 'SFML', 'Finite State Machine'],
+      description:
+        'A maze escape game built with C++ and SFML, using a finite state machine for game logic. Players navigate increasingly larger mazes, solving challenges to advance through levels.',
+      link: {
+        href: 'https://github.com/wojt707/maze',
       },
     },
   ],

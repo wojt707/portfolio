@@ -1,6 +1,7 @@
 import { GlobeIcon, MailIcon, PhoneIcon } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage, Button } from '@/components/ui'
 import { RESUME_DATA } from '@/data/resume-data'
+import { copyToClipboard } from '@/lib/utils'
 
 interface LocationLinkProps {
   location: string
@@ -56,10 +57,24 @@ const ContactButtons: React.FC<ContactButtonsProps> = ({
         <SocialButton href={personalWebsiteUrl} icon={GlobeIcon} />
       )}
       {contact.email && (
-        <SocialButton href={`mailto:${contact.email}`} icon={MailIcon} />
+        <Button
+          className="size-8 cursor-pointer"
+          variant="outline"
+          size="icon"
+          onClick={() => copyToClipboard(contact.email)}
+        >
+          <MailIcon className="size-4" aria-hidden="true" />
+        </Button>
       )}
       {contact.tel && (
-        <SocialButton href={`tel:${contact.tel}`} icon={PhoneIcon} />
+        <Button
+          className="size-8 cursor-pointer"
+          variant="outline"
+          size="icon"
+          onClick={() => copyToClipboard(contact.tel)}
+        >
+          <PhoneIcon className="size-4" aria-hidden="true" />
+        </Button>
       )}
       {contact.social.map((social) => (
         <SocialButton key={social.name} href={social.url} icon={social.icon} />
