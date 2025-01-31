@@ -85,7 +85,7 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
               {company}
             </a>
           </h3>
-          <div className="flex gap-x-4 items-center text-pretty font-mono text-xs text-gray-500">
+          <div className="max-sm:hidden flex gap-x-4 items-center text-pretty font-mono text-xs text-gray-500">
             <a
               className="flex gap-x-1.5 leading-none hover:underline"
               href={locationLink}
@@ -100,7 +100,7 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
             </a>
             <Badge
               variant="secondary"
-              className="align-middle text-xs hover:bg-primary hover:text-primary-foreground hover:border-primary"
+              className="text-nowrap align-middle text-xs hover:bg-primary hover:text-primary-foreground hover:border-primary"
             >
               {type}
             </Badge>
@@ -113,7 +113,23 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
           monthEnd={monthEnd}
         />
       </div>
-
+      <div className="sm:hidden mt-1 flex gap-x-4 items-center text-pretty font-mono text-xs text-gray-500">
+        <a
+          className="flex gap-x-1.5 leading-none hover:underline"
+          href={locationLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <GlobeIcon className="min-w-3 min-h-3 size-3" aria-hidden="true" />
+          {location}
+        </a>
+        <Badge
+          variant="secondary"
+          className="text-nowrap align-middle text-xs hover:bg-primary hover:text-primary-foreground hover:border-primary"
+        >
+          {type}
+        </Badge>
+      </div>
       <h4 className="mt-1 font-mono text-sm font-semibold leading-none">
         {title}
       </h4>

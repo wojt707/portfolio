@@ -9,6 +9,7 @@ import {
   CardDescription,
   CardContent,
 } from './card'
+import { Toaster } from './sonner'
 
 export {
   Avatar,
@@ -24,4 +25,5 @@ export {
   CardTitle,
   CardDescription,
   CardContent,
+  Toaster,
 }

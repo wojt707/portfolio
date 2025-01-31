@@ -1,6 +1,7 @@
 import { GlobeIcon, MailIcon, PhoneIcon } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage, Button } from '@/components/ui'
 import { RESUME_DATA } from '@/data/resume-data'
+import { copyToClipboard } from '@/lib/utils'
 
 interface LocationLinkProps {
   location: string
@@ -51,15 +52,29 @@ const ContactButtons: React.FC<ContactButtonsProps> = ({
   personalWebsiteUrl,
 }) => {
   return (
-    <div className="flex gap-x-1 pt-1 font-mono text-sm text-foreground/80">
+    <div className="flex gap-x-1 font-mono text-sm text-foreground/80">
       {personalWebsiteUrl && (
         <SocialButton href={personalWebsiteUrl} icon={GlobeIcon} />
       )}
       {contact.email && (
-        <SocialButton href={`mailto:${contact.email}`} icon={MailIcon} />
+        <Button
+          className="size-8 cursor-pointer"
+          variant="outline"
+          size="icon"
+          onClick={() => copyToClipboard(contact.email)}
+        >
+          <MailIcon className="size-4" aria-hidden="true" />
+        </Button>
       )}
       {contact.tel && (
-        <SocialButton href={`tel:${contact.tel}`} icon={PhoneIcon} />
+        <Button
+          className="size-8 cursor-pointer"
+          variant="outline"
+          size="icon"
+          onClick={() => copyToClipboard(contact.tel)}
+        >
+          <PhoneIcon className="size-4" aria-hidden="true" />
+        </Button>
       )}
       {contact.social.map((social) => (
         <SocialButton key={social.name} href={social.url} icon={social.icon} />
@@ -71,9 +86,9 @@ const ContactButtons: React.FC<ContactButtonsProps> = ({
 const Header: React.FC = () => {
   return (
     <header className="flex items-center justify-between">
-      <div className="flex-1 space-y-1.5">
-        <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
-        <p className="max-w-md text-pretty font-mono text-sm text-foreground/80">
+      <div className="flex-1 space-y-1">
+        <div className="text-3xl font-bold">{RESUME_DATA.name}</div>
+        <p className="max-w-md text-pretty font-mono text-sm text-foreground/80 mb-6">
           {RESUME_DATA.about}
         </p>
 
