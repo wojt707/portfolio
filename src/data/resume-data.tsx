@@ -5,14 +5,14 @@ export const RESUME_DATA = {
   initials: 'WD',
   location: 'Radzionków, Poland, CET',
   locationLink: 'https://www.google.com/maps/place/Radzionków',
-  about:
-    'Passionate software developer eager to build innovative full-stack applications, AI models, and data-driven solutions while continuously learning and growing.',
+  about: 'I build software that works.',
   summary: (
     <>
-      I’m a curious and driven developer who’s still gathering the experience in
-      full-stack development, AI, and data engineering. I’m honest about what I
-      don’t know, but I’m great at finding answers and working hard to solve
-      problems. I’m excited to keep learning and taking on new challenges.
+      As a software developer exploring various technical fields - mainly
+      full-stack development, machine learning and data engineering - I focus on
+      writing clean code. I don’t pretend to know everything, but I know how to
+      find the answers and I work hard to solve the problems. I’m excited to
+      keep learning and taking on new challenges.
     </>
   ),
   avatarUrl: 'https://avatars.githubusercontent.com/u/52101387?v=4',

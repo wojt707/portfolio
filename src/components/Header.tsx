@@ -52,7 +52,7 @@ const ContactButtons: React.FC<ContactButtonsProps> = ({
   personalWebsiteUrl,
 }) => {
   return (
-    <div className="flex gap-x-1 pt-1 font-mono text-sm text-foreground/80">
+    <div className="flex gap-x-1 font-mono text-sm text-foreground/80">
       {personalWebsiteUrl && (
         <SocialButton href={personalWebsiteUrl} icon={GlobeIcon} />
       )}
@@ -86,9 +86,9 @@ const ContactButtons: React.FC<ContactButtonsProps> = ({
 const Header: React.FC = () => {
   return (
     <header className="flex items-center justify-between">
-      <div className="flex-1 space-y-1.5">
-        <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
-        <p className="max-w-md text-pretty font-mono text-sm text-foreground/80">
+      <div className="flex-1 space-y-1">
+        <div className="text-3xl font-bold">{RESUME_DATA.name}</div>
+        <p className="max-w-md text-pretty font-mono text-sm text-foreground/80 mb-6">
           {RESUME_DATA.about}
         </p>
 
