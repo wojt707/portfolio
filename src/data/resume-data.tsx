@@ -169,7 +169,7 @@ export const RESUME_DATA = {
         'TailwindCSS',
         'Shadcn-ui',
         'Python',
-        'Pythorch',
+        'PyTorch',
         'Flask',
       ],
       description:
@@ -206,7 +206,7 @@ export const RESUME_DATA = {
     },
     {
       title: 'Bipedal Walker TD3',
-      techStack: ['Python', 'Pythorch', 'Gymnasium', 'TD3 (Twin Delayed DDPG)'],
+      techStack: ['Python', 'PyTorch', 'Gymnasium', 'TD3 (Twin Delayed DDPG)'],
       description:
         'Reinforcement learning project training a Bipedal Walker agent using the TD3 algorithm in the Gymnasium environment aimed at improving stability and motion of the agent.',
       link: {
