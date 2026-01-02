@@ -10,6 +10,12 @@ import {
   CardContent,
 } from './card'
 import { Toaster } from './sonner'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from './tooltip'
 
 export {
   Avatar,
@@ -26,4 +32,8 @@ export {
   CardDescription,
   CardContent,
   Toaster,
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+  TooltipProvider,
 }

@@ -10,7 +10,7 @@ const Summary: React.FC<AboutProps> = ({ summary, className }) => {
   return (
     <section className={cn('flex min-h-0 flex-col gap-y-3', className)}>
       <h2 className="text-xl font-bold">About</h2>
-      <div className="text-pretty font-mono text-sm text-foreground/80">
+      <div className="text-pretty text-justify font-mono text-sm text-foreground/80">
         {summary}
       </div>
     </section>

@@ -1,5 +1,13 @@
-import { GlobeIcon, MailIcon, PhoneIcon } from 'lucide-react'
-import { Avatar, AvatarFallback, AvatarImage, Button } from '@/components/ui'
+import { GlobeIcon, MailIcon, PhoneIcon, Download } from 'lucide-react'
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+  Button,
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '@/components/ui'
 import { RESUME_DATA } from '@/data/resume-data'
 import { copyToClipboard } from '@/lib/utils'
 
@@ -57,28 +65,69 @@ const ContactButtons: React.FC<ContactButtonsProps> = ({
         <SocialButton href={personalWebsiteUrl} icon={GlobeIcon} />
       )}
       {contact.email && (
-        <Button
-          className="size-8 cursor-pointer"
-          variant="outline"
-          size="icon"
-          onClick={() => copyToClipboard(contact.email)}
-        >
-          <MailIcon className="size-4" aria-hidden="true" />
-        </Button>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Button
+              className="size-8 cursor-pointer"
+              variant="outline"
+              size="icon"
+              onClick={() => copyToClipboard(contact.email)}
+            >
+              <MailIcon className="size-4" aria-hidden="true" />
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>{contact.email}</p>
+          </TooltipContent>
+        </Tooltip>
       )}
       {contact.tel && (
-        <Button
-          className="size-8 cursor-pointer"
-          variant="outline"
-          size="icon"
-          onClick={() => copyToClipboard(contact.tel)}
-        >
-          <PhoneIcon className="size-4" aria-hidden="true" />
-        </Button>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Button
+              className="size-8 cursor-pointer"
+              variant="outline"
+              size="icon"
+              onClick={() => copyToClipboard(contact.tel)}
+            >
+              <PhoneIcon className="size-4" aria-hidden="true" />
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent className='bg-primary'>
+            <p>{contact.tel}</p>
+          </TooltipContent>
+        </Tooltip>
       )}
       {contact.social.map((social) => (
-        <SocialButton key={social.name} href={social.url} icon={social.icon} />
+        <Tooltip key={social.name}>
+          <TooltipTrigger asChild>
+            <Button className="size-8" variant="outline" size="icon" asChild>
+              <a href={social.url} target="_blank" rel="noopener noreferrer">
+                <social.icon className="size-4" aria-hidden="true" />
+              </a>
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>{social.url}</p>
+          </TooltipContent>
+        </Tooltip>
       ))}
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <Button className="size-8" variant="outline" size="icon" asChild>
+            <a
+              href={`/${RESUME_DATA.pdfName}`}
+              download
+              aria-label="Download resume"
+            >
+              <Download className="size-4" aria-hidden="true" />
+            </a>
+          </Button>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>{RESUME_DATA.pdfName}</p>
+        </TooltipContent>
+      </Tooltip>
     </div>
   )
 }

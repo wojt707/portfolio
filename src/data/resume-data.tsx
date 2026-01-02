@@ -8,15 +8,16 @@ export const RESUME_DATA = {
   about: 'I build software that works.',
   summary: (
     <>
-      As a software developer exploring various technical fields - mainly
-      full-stack development, machine learning and data engineering - I focus on
-      writing clean code. I don’t pretend to know everything, but I know how to
-      find the answers and I work hard to solve the problems. I’m excited to
-      keep learning and taking on new challenges.
+      As a software developer exploring various technical fields,
+      mainly full-stack development and machine learning, I focus on
+      writing clean code. I don’t pretend to know everything, but I
+      know how to find the answers and I work hard to solve the problems.
+      I’m excited to keep learning and taking on new challenges.
     </>
   ),
   avatarUrl: 'https://avatars.githubusercontent.com/u/52101387?v=4',
   personalWebsiteUrl: '',
+  pdfName: 'wojciech_dolibog_resume.pdf',
   contact: {
     email: 'dolibog.wojtek@gmail.com',
     tel: '+48534336807',
@@ -35,11 +36,22 @@ export const RESUME_DATA = {
   },
   education: [
     {
+      school: 'University of Porto',
+      location: 'Porto, Portugal, WET',
+      locationLink: 'https://www.google.com/maps/place/Porto',
+      link: 'https://www.up.pt/portal/en/',
+      degree: 'International mobility program, Data Science',
+      start: '2025',
+      monthStart: 'Sep',
+      end: '2026',
+      monthEnd: 'Feb',
+    },
+    {
       school: 'Silesian University of Technology',
       location: 'Gliwice, Poland, CET',
       locationLink: 'https://www.google.com/maps/place/Gliwice',
       link: 'https://www.polsl.pl',
-      degree: 'Master of Science (MSc) in Data Science (conducted in English)',
+      degree: 'Master of Science in Data Science (conducted in English)',
       start: '2025',
       monthStart: 'Mar',
       end: '2026',
@@ -51,7 +63,7 @@ export const RESUME_DATA = {
       locationLink: 'https://www.google.com/maps/place/Gliwice',
       link: 'https://www.polsl.pl',
       degree:
-        'Bachelor of Science (BSc) in Informatics (Computer Science conducted in English)',
+        'Bachelor of Science in Informatics (conducted in English)',
       start: '2021',
       monthStart: 'Oct',
       end: '2025',
@@ -60,8 +72,38 @@ export const RESUME_DATA = {
   ],
   work: [
     {
+      company: 'EY GDS',
+      location: 'Katowice, Poland, CET',
+      locationLink:
+        'https://www.google.pl/maps/place/Katowice',
+      link: 'https://www.ey.com/en_gl',
+      type: 'Hybrid',
+      badges: ['Angular', 'Python', 'PostgreSQL', 'Docker', 'Kubernetes'],
+      title: 'Software Developer',
+      start: '2025',
+      monthStart: 'May',
+      end: '',
+      monthEnd: '',
+      description: (
+        <>
+          <ul className="list-inside list-disc text-justify">
+            <li>
+              Developing and maintaining full-stack applications using
+              Angular, TypeScript, Python (FastAPI), and PostgreSQL,
+              focusing on design patterns and clean architecture.
+            </li>
+            <li>
+              Deploying and managing containerized services with
+              Docker and Kubernetes, contributing across the stack to
+              deliver production-ready solutions.
+            </li>
+          </ul>
+        </>
+      ),
+    },
+    {
       company: 'Fagor Arrasate',
-      location: 'Lawrenceburg, TN, United States, CST',
+      location: 'Lawrenceburg, TN, US, CST',
       locationLink:
         'https://www.google.pl/maps/place/Lawrenceburg,+Tennessee,+Stany+Zjednoczone',
       link: 'https://fagorarrasate.com',
@@ -74,18 +116,14 @@ export const RESUME_DATA = {
       monthEnd: 'Sep',
       description: (
         <>
-          <ul className="list-inside list-disc">
+          <ul className="list-inside list-disc text-justify">
             <li>
               Installing and commissioning control systems at customer facility,
               ensuring smooth integration and functionality.
             </li>
             <li>
-              Programming PLCs, HMIs, and SCADA systems for enhanced
-              performance.
-            </li>
-            <li>
-              Supporting customers on-site, upgrading systems, and modifying
-              control solutions to meet evolving operational needs.
+              Programming PLCs, HMIs and SCADA systems, supporting
+              customers on-site and upgrading solutions.
             </li>
           </ul>
         </>
@@ -105,20 +143,13 @@ export const RESUME_DATA = {
       monthEnd: 'Jul',
       description: (
         <>
-          <ul className="list-inside list-disc">
+          <ul className="list-inside list-disc text-justify">
             <li>
-              Developing a comprehensive ERP web application using Java, Spring,
-              MySQL, Angular 11 and RESTful APIs.
+              Building core modules of an ERP web system using Java
+              (Spring Boot), Angular, and MySQL.
             </li>
             <li>
-              Working in agile methodology, participating in daily meetings to
-              address problems, showcase progress, and discuss future
-              improvements.
-            </li>
-            <li>
-              Closely collaborating with other developers, fostering quicker
-              development of soft skills and software engineering best
-              practices.
+              Collaborating in an agile team to deliver stable, maintainable software through iterative improvements.
             </li>
           </ul>
         </>
@@ -138,20 +169,13 @@ export const RESUME_DATA = {
       monthEnd: 'Aug',
       description: (
         <>
-          <ul className="list-inside list-disc">
+          <ul className="list-inside list-disc text-justify">
             <li>
-              Developing a production optimization web application using
-              Angular, Typescript, CSS, and HTML, aimed at streamlining
-              manufacturing processes and improving efficiency.
+              Developing a production optimization web dashboard using Angular, TypeScript, HTML, and CSS, aimed at improving efficiency of manufacturing processes.
             </li>
             <li>
-              Working closely with peers to identify issues and provide suitable
-              resolutions.
-            </li>
-            <li>
-              Actively participating in code reviews and providing constructive
-              feedback, contributing to an improvement in overall code quality
-              and maintainability.
+              Actively participating in code reviews, contributing to an
+              improvement in overall code quality and maintainability.
             </li>
           </ul>
         </>
@@ -159,17 +183,19 @@ export const RESUME_DATA = {
     },
   ],
   skills: [
-    'Python (Flask, Django, Pytorch)',
+    'Python (FastAPI, Flask, Django)',
+    'Pytorch/Scikit-learn/NumPy/Pandas',
+    'Angular',
     'React/Next.js/Vite',
     'TypeScript',
     'TailwindCSS/HTML/CSS',
+    'Java (Spring Boot)',
     'SQL (PostgreSQL, MySQL)',
-    'C++ (STL, SFML)',
-    'Java (Spring)',
-    'Linux, ROS',
-    'Cloud Computing (GCP)',
+    'Cloud Computing (GCP, AWS)',
+    'Docker/Kubernetes',
     'CI/CD',
-    'Agile Methodologies (Scrum)',
+    'Design Patterns/Clean Architecture',
+    'Unit and Integration Testing',
   ],
   projects: [
     {
